@@ -1,0 +1,134 @@
+﻿* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: Arial, Tahoma;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/*-----header-----*/
+#header {
+    width: 100%;
+    height: 155px;
+    border-bottom: 1px solid #394540;
+    position: fixed;
+    z-index: 100;
+    background-color: white;
+}
+/*-----Container-----*/
+#container {
+    float: left;
+    padding-top: 155px;
+    border: 1px solid white;
+    position: relative;
+    width: 100%;
+    background-color: #eef1f2;
+}
+
+
+/*-----Menu-----*/
+#menu {
+    width: 200px;
+    height: 100%;
+    background-color: #191818;
+    float: left;
+    position: fixed;
+}
+
+    #menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+        #menu ul li {
+            color: white;
+            height: 50px;
+            line-height: 50px;
+            transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -webkit-transition: all 0.5s;
+            position: relative;
+        }
+
+            #menu ul li:hover {
+                background-color: #454545;
+            }
+
+            #menu ul li a {
+                color: white;
+                display: block;
+                padding: 0 0.3em;
+                border-bottom: 1px solid #333;
+            }
+
+            #menu ul li .sub-menu {
+                display: none;
+                position: absolute;
+                top: 0;
+                left: 200px;
+                width: 200px;
+                height: 400px;
+                overflow: auto;
+                background-color: #191818;
+                list-style-type: none;
+            }
+
+            #menu ul li:hover .sub-menu {
+                background-color: #454545;
+                display: block;
+            }
+
+.sub-menu a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    text-indent: 10px;
+    font-size: 12px;
+}
+
+    .sub-menu a:hover {
+        background-color: #191818;
+    }
+
+#sub-menu ul li{
+    transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+
+
+
+
+/*-----Content-----*/
+#content {
+    margin-left: 200px;
+    width: 85%;
+}
+
+#sub-content {
+    width: 40%;
+    height: 500px;
+    border-right: 1px solid #454545;
+    float: left;
+    margin: 2.5% 2.5%;
+}
+
+
+/*----Footer-----*/
+#footer {
+    margin-left: 200px;
+    text-align: center;
+    font-size: 12px;
+}
