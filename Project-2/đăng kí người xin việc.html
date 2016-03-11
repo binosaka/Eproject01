@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Người xin việc đăng kí thành viên</title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+        .dk {
+            width: 140px;
+        }
+
+        #idAcc {
+            padding-left: 30px;
+        }
+
+        #thongTin {
+            padding-left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="KhungDangKi">
+        <h3 style="color:red">
+            Người tìm việc đăng kí thành viên
+        </h3>
+        <br />
+        <p style="font-weight:bold">Thông tin đăng nhập</p>
+        <div id="idAcc">
+            <p class="dk">Email* <input type="email" class="Input" autocomplete="off" /></p>
+            <p class="dk">Mật khẩu* <input type="password" class="Input" /></p>
+            <p class="dk">Nhập lại mật khẩu* <input type="password" class="Input" /></p>
+        </div>
+        <hr style="width:400px;float:left;" />
+        <br />
+        <p style="font-weight:bold">Thông tin công ty</p>
+        <div id="thongTin">
+            <p class="dk">Họ và tên* <input type="text" class="Input" /></p>
+            <p class="dk">Địa chỉ* <input type="text" class="Input" /></p>
+            <p class="dk">Điện thoại* <input type="tel" class="Input" /></p>
+            <p class="dk">Giới tính* 
+                <div>
+                    <select>
+                        <option value="Nam">Nam</option>
+                        <option value="Nữ">Nữ</option>
+                    </select>
+                </div>
+            </p>
+        </div>
+        <input type="submit" value="Đăng kí" style="font-weight:bold; margin-left:200px;" />
+    </div>
+</body>
+</html>
