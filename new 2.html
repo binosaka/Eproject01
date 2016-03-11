@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+		<style> <!--class dấu .; id dấu # -->
+		body{
+			margin: 0;
+			padding: 0;
+			font: 15px Arial tahoma;
+			color: #555;
+			background-color: #fff;
+		
+		}
+		h1,h2{
+			font-size: 180%;
+			font-weight: normal;
+			color: #ccc;
+		}
+		
+		a{
+			color: #333;
+			text-decoration: none;
+		}
+		a:hover{
+			color: #999;
+		}
+		img{
+			border: none;
+		}
+		ul#thumbs, ul#thumbs li {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		ul#thumbs li{
+			float: left;
+			padding: 2px;
+			border: 2px solid #ccc;
+		}
+		ul#thumbs a{
+			display: block;
+			float: left;
+			width: 135px;
+			height: 125px;
+			line-height: 50px;
+			overflow: hidden;
+			position: relative; <!-- so vs element cha --> <!--fixed luôn cố định vs khung nhìn-->
+			z-index: 1;
+		}
+		ul#thumbs img{
+			top: 0;
+			left: 0;
+			float: left;
+			position: absolute; <!-- so vs bên ngoài-->
+		}
+		ul#thumbs a:hover{
+			overflow: visible;
+			z-index: 1000;
+		}
+		ul#thumbs a:hover img{
+			border: 1px solid #999;
+			background: #fff;
+			padding: 2px;
+		}
+		</style>
+</head>
+
+<body>
+	<h2> Thumbnails </h2>
+	<ul id="thumbs">
+		<li>
+			<a href="HTML5.png" target="_blank">
+				<img src="123.jpg" />
+			</a>
+		</li>
+	</ul>
+
+
+
+</body>
+
+
+
+
+
+</html>
