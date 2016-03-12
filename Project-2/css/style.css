@@ -13,6 +13,7 @@ body {
 
 a {
     text-decoration: none;
+    color: white;
 }
 
 
@@ -25,6 +26,20 @@ a {
     z-index: 100;
     background-color: white;
 }
+
+#logo {
+    width: 60%;
+    float: left;
+}
+
+#login-register {
+    width: 40%;
+    height: 155px;
+    line-height: 155px;
+    float: left;
+}
+
+
 /*-----Container-----*/
 #container {
     float: left;
@@ -32,7 +47,7 @@ a {
     border: 1px solid white;
     position: relative;
     width: 100%;
-    background-color: #eef1f2;
+    background-color: #d8dbdb;
 }
 
 
@@ -101,10 +116,14 @@ a {
         background-color: #191818;
     }
 
-#sub-menu ul li {
+.sub-menu ul li {
     transition: all 0.5s;
     -moz-transition: all 0.5s;
     -webkit-transition: all 0.5s;
+}
+
+#menu ul li #sub-menu-box {
+    height: 101px;
 }
 
 
@@ -115,23 +134,25 @@ a {
 #content {
     margin-left: 200px;
     width: 85%;
-    height: 100%;
+    float: left;
+    z-index: 1;
+    max-height: 920px;
+    min-height: 500px;
 }
 
-#sub-content-1 {
-    width: 40%;
-    height: 500px;
-    background-color: white;
-    float: left;
-    margin: 2.5% 2.5%;
+.row {
+    overflow: hidden;
+    margin: 2.5% auto;
 }
-#sub-content-2 {
-    width: 40%;
-    height: 500px;
-    background-color: white;
-    float: left;
-    margin: 2.5% 2.5%;
-}
+
+    .row .col {
+        float: left;
+        width: 40%;
+        height: 500px;
+        margin-left: 2.5%;
+        background-color: white;
+    }
+
 
 #head-sub-content {
     width: 100%;
@@ -140,13 +161,100 @@ a {
     color: white;
     background-color: #191818;
     text-align: center;
-    margin-top: -16px;
+    margin-top: -17px;
+}
+
+#sub-content {
+    width: 85%;
+    min-height: 500px;
+    background-color: white;
+    margin-left: 2.5%;
+}
+
+#name-sub-content {
+    width: 30%;
+    height: 60px;
+    line-height: 60px;
+    color: white;
+    background-color: #191818;
+    text-align: center;
+    font-size: 20px;
+    margin-left: 2.5%;
+    margin-top: 2.5%;
+    display: inline-block;
 }
 
 
-/*----Footer-----*/
-#footer {
+    /*----Footer-----*/
+#footer{
     margin-left: 200px;
     text-align: center;
     font-size: 12px;
+    height: 40px;
+    line-height: 40px;
 }
+
+/*----acc----*/
+#acc {
+    display: inline;
+}
+
+    #acc > ul {
+        list-style-type: none;
+        width: 50%;
+        float: right;
+        margin-top: 20px;
+    }
+
+        #acc > ul > li {
+            color: white;
+            display: inline-table;
+            width: 40%;
+            line-height: 30px;
+            position: relative;
+        }
+
+            #acc > ul > li > a {
+                color: white;
+                text-decoration: none;
+                display: block;
+                border: 1px solid white;
+                background-color: #191818;
+                text-align: center;
+                font-size: 12px;
+            }
+
+                #acc > ul > li > a:hover {
+                    background-color: #454545;
+                }
+
+            #acc > ul > li > .sub-acc {
+                display: none;
+                position: absolute;
+                background: #191818;
+                width: 186px;
+                list-style-type: none;
+                height: 60px;
+                right: 0;
+                z-index: 2;
+                border: 1px solid white;
+            }
+
+
+            #acc > ul > li:hover > .sub-acc {
+                display: block;
+            }
+
+.sub-acc a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    text-indent: 10px;
+    font-size: 12px;
+    width: 128%;
+    margin-left: -40px;
+}
+
+    .sub-acc a:hover {
+        background-color: #454545;
+    }
