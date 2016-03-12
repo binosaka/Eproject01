@@ -174,11 +174,11 @@ $(document).ready(function() {
             <form method="post" action="login.php">
                 <label for="username">
                     Username:
-                    <input type="text" name="username" id="username" placeholder="Username must be between 8 and 20 characters" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{8,20}$" required />
+                    <input type="text" name="username" id="username" placeholder="Nhập username hoặc email" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{8,20}$" required />
                 </label>
                 <label for="password">
                     Password:
-                    <input type="password" name="password" id="password" placeholder="Password must contain 1 uppercase, lowercase and number" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required />
+                    <input type="password" name="password" id="password" placeholder="Password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required />
                 </label>
                 <button type="submit">Đăng nhập</button>
             </form>
