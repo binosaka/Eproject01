@@ -7,37 +7,37 @@
     <link rel="stylesheet" href="css\reset.css" />
     <link rel="stylesheet" href="css\style.css" />
     <link rel="stylesheet" href="css\form.css" />
-    	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script>
-$(document).ready(function() {
-    $("#loginLink").click(function( event ){
-        event.preventDefault();
-        $(".overlay").fadeToggle("fast");
-    });
-     
-    $(".overlayLink").click(function(event){
-        event.preventDefault();
-        var action = $(this).attr('data-action');
-         
-        $.get( "ajax/" + action, function( data ) {
-            $( ".login-content" ).html( data );
-        }); 
-         
-        $(".overlay").fadeToggle("fast");
-    });
-     
-    $(".close").click(function(){
-        $(".overlay").fadeToggle("fast");
-    });
-     
-    $(document).keyup(function(e) {
-        if(e.keyCode == 27 && $(".overlay").css("display") != "none" ) { 
-            event.preventDefault();
-            $(".overlay").fadeToggle("fast");
-        }
-    });
-});
-</script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#loginLink").click(function (event) {
+                event.preventDefault();
+                $(".overlay").fadeToggle("fast");
+            });
+
+            $(".overlayLink").click(function (event) {
+                event.preventDefault();
+                var action = $(this).attr('data-action');
+
+                $.get("ajax/" + action, function (data) {
+                    $(".login-content").html(data);
+                });
+
+                $(".overlay").fadeToggle("fast");
+            });
+
+            $(".close").click(function () {
+                $(".overlay").fadeToggle("fast");
+            });
+
+            $(document).keyup(function (e) {
+                if (e.keyCode == 27 && $(".overlay").css("display") != "none") {
+                    event.preventDefault();
+                    $(".overlay").fadeToggle("fast");
+                }
+            });
+        });
+    </script>
 </head>
 <body>
     <div id="header">
@@ -51,8 +51,8 @@ $(document).ready(function() {
                     <li>
                         <a>Đăng Kí</a>
                         <ul class="sub-acc">
-                            <li><a href="register-danh-cho-nha-tuyen-dung.html">Dành cho nhà tuyển dụng</a></li>
-                            <li><a href="register-danh-cho-ung-vien.html">Dành cho ứng viên</a></li>
+                            <li><a href="#">Dành cho nhà tuyển dụng</a></li>
+                            <li><a href="#">Dành cho ứng viên</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -166,25 +166,28 @@ $(document).ready(function() {
                 <li><a href="#">Liên hệ</a></li>
             </ul>
         </div>
-<div class="overlay" style="display:none;" >
-    <div class="login-wrapper">
-        <div class="login-content">
-            <a class="close">x</a>
-            <h3>Đăng nhập</h3>
-            <form method="post" action="index.html">
-                <label for="username">
-                    Username:
-                    <input type="text" name="username" id="username" placeholder="Nhập username hoặc email"  required />
-                </label>
-                <label for="password">
-                    Password:
-                    <input type="password" name="password" id="password" placeholder="Password"  required />
-                </label>
-                <button type="submit">Đăng nhập</button>
-            </form>
+
+        <!--------------Login------------>
+        <div class="overlay" style="display: none;">
+            <div class="login-wrapper">
+                <div class="login-content">
+                    <a class="close">x</a>
+                    <h3>Đăng nhập</h3>
+                    <form method="post" action="index.html">
+                        <label for="username">
+                            Username:
+                            <input type="text" name="username" id="username" placeholder="Nhập Username hoặc Email" required />
+                        </label>
+                        <label for="password">
+                            Password:
+                            <input type="password" name="password" id="password" placeholder="Password" required />
+                        </label>
+                        <button type="submit">Đăng nhập</button>
+                    </form>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+
         <div class="row" id="content">
             <div id="box1" class="col">
                 <div id="head-sub-content">

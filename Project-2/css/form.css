@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 /* CSS Document */
 
 	/*
@@ -90,7 +90,7 @@ form label {
         }
      
 form button {
-    background-color: #50c1e9;
+    background-color: #191818;
     border: 1px solid rgba(0,0,0,.1);
     color: rgb(255,255,255);
     font-family: 'Varela Round', sans-serif;
@@ -100,11 +100,11 @@ form button {
 }
  
     form button:hover {
-        background-color: #1bc5b3;
+        background-color:#454545;
         cursor: pointer;
     }
 	a.close {
-	background-color: rgb(204,204,204);
+	background-color: #191818;
 	border-radius: 50%;
 	color: rgb(255,255,255);
 	display: block;
@@ -118,6 +118,6 @@ form button {
 }
 	
 	a.close:hover {
-		background-color: #1bc5b3;
+		background-color: #454545;
 		cursor: pointer;
 	}

@@ -6,6 +6,38 @@
     <meta name="viewport" content="device-width, initial-scale=1" />
     <link rel="stylesheet" href="css\reset.css" />
     <link rel="stylesheet" href="css\style.css" />
+    <link rel="stylesheet" href="css\form.css" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#loginLink").click(function (event) {
+                event.preventDefault();
+                $(".overlay").fadeToggle("fast");
+            });
+
+            $(".overlayLink").click(function (event) {
+                event.preventDefault();
+                var action = $(this).attr('data-action');
+
+                $.get("ajax/" + action, function (data) {
+                    $(".login-content").html(data);
+                });
+
+                $(".overlay").fadeToggle("fast");
+            });
+
+            $(".close").click(function () {
+                $(".overlay").fadeToggle("fast");
+            });
+
+            $(document).keyup(function (e) {
+                if (e.keyCode == 27 && $(".overlay").css("display") != "none") {
+                    event.preventDefault();
+                    $(".overlay").fadeToggle("fast");
+                }
+            });
+        });
+    </script>
 </head>
 <body>
     <div id="header">
@@ -15,12 +47,12 @@
         <div id="login-register">
             <div id="acc">
                 <ul>
-                    <li><a href="login.html">Đăng Nhập</a></li>
+                    <li><a href="login.php" class="overlayLink" data-action="login-form.html">Đăng Nhập</a></li>
                     <li>
-                        <a>Đăng Kí</a>
+                        <a>Đăng Kí</a>
                         <ul class="sub-acc">
-                            <li><a href="register-danh-cho-nha-tuyen-dung.html">Dành cho nhà tuyển dụng</a></li>
-                            <li><a href="register-danh-cho-ung-vien.html">Dành cho ứng viên</a></li>
+                            <li><a href="register-danh-cho-nha-tuyen-dung.html">Dành cho nhà tuyển dụng</a></li>
+                            <li><a href="register-danh-cho-ung-vien.html">Dành cho ứng viên</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -34,93 +66,93 @@
                 <li>
                     <a>Việc làm theo ngành nghề</a>
                     <ul class="sub-menu">
-                        <li><a href="ke-toan-kiem-toan.html">Kế toán - Kiểm toán</a></li>
-                        <li><a href="kien-truc-thiet-ke-noi-that.html">Kiến trúc - Thiết kế nội thất</a></li>
+                        <li><a href="ke-toan-kiem-toan.html">Kế toán - Kiểm toán</a></li>
+                        <li><a href="kien-truc-thiet-ke-noi-that.html">Kiến trúc - Thiết kế nội thất</a></li>
                         <li><a href="nhan-vien-kinh-doanh.html">Nhân viên kinh doanh</a></li>
-                        <li><a href="hanh-chinh-van-phong.html">Hành chính - Văn Phòng</a></li>
-                        <li><a href="xay-dung.html">Xây dựng</a></li>
+                        <li><a href="hanh-chinh-van-phong.html">Hành chính - Văn Phòng</a></li>
+                        <li><a href="xay-dung.html">Xây dựng</a></li>
                         <li><a href="marketing-pr.html">Marketing - PR</a></li>
-                        <li><a href="tu-van.html">Tư vấn</a></li>
-                        <li><a href="ky-thuat.html">Kỹ thuật</a></li>
-                        <li><a href="ban-hang.html">Bán hàng</a></li>
-                        <li><a href="it-phan-mem.html">IT phần mềm</a></li>
-                        <li><a href="bao-chi-truyen-hinh.html">Báo chí - Truyền hình</a></li>
-                        <li><a href="bao-hiem.html">Bảo hiểm</a></li>
-                        <li><a href="bao-ve.html">Bảo vệ</a></li>
-                        <li><a href="bien-phien-dich.html">Biên - Phiên dịch</a></li>
-                        <li><a href="buu-chinh.html">Bưu chính</a></li>
-                        <li><a href="chung-khoan-vang.html">Chứng khoán - Vàng</a></li>
-                        <li><a href="co-khi-che-tao.html">Cơ khí - Chế tạo</a></li>
-                        <li><a href="cong-nghiep.html">Công nghiệp</a></li>
-                        <li><a href="dau-khi-hoa-chat.html">Dầu khí - Hóa chất</a></li>
-                        <li><a href="dau-tu.html">Đầu tư</a></li>
-                        <li><a href="det-may-da-giay.html">Dệt may - Da giày</a></li>
-                        <li><a href="dich-vu.html">Dịch vụ</a></li>
-                        <li><a href="dien-tu-vien-thong.html">Điện tử viễn thông</a></li>
-                        <li><a href="dien-dien-tu.html">Điện - Điện tử</a></li>
-                        <li><a href="du-lich.html">Du lịch</a></li>
+                        <li><a href="tu-van.html">Tư vấn</a></li>
+                        <li><a href="ky-thuat.html">Kỹ thuật</a></li>
+                        <li><a href="ban-hang.html">Bán hàng</a></li>
+                        <li><a href="it-phan-mem.html">IT phần mềm</a></li>
+                        <li><a href="bao-chi-truyen-hinh.html">Báo chí - Truyền hình</a></li>
+                        <li><a href="bao-hiem.html">Bảo hiểm</a></li>
+                        <li><a href="bao-ve.html">Bảo vệ</a></li>
+                        <li><a href="bien-phien-dich.html">Biên - Phiên dịch</a></li>
+                        <li><a href="buu-chinh.html">Bưu chính</a></li>
+                        <li><a href="chung-khoan-vang.html">Chứng khoán - Vàng</a></li>
+                        <li><a href="co-khi-che-tao.html">Cơ khí - Chế tạo</a></li>
+                        <li><a href="cong-nghiep.html">Công nghiệp</a></li>
+                        <li><a href="dau-khi-hoa-chat.html">Dầu khí - Hóa chất</a></li>
+                        <li><a href="dau-tu.html">Đầu tư</a></li>
+                        <li><a href="det-may-da-giay.html">Dệt may - Da giày</a></li>
+                        <li><a href="dich-vu.html">Dịch vụ</a></li>
+                        <li><a href="dien-tu-vien-thong.html">Điện tử viễn thông</a></li>
+                        <li><a href="dien-dien-tu.html">Điện - Điện tử</a></li>
+                        <li><a href="du-lich.html">Du lịch</a></li>
                         <li><a href="game.html">Game</a></li>
-                        <li><a href="giao-duc-dao-tao.html">Giáo dục - Đào tạo</a></li>
-                        <li><a href="hang-gia-dung.html">Hàng gia dụng</a></li>
-                        <li><a href="hang-hai.html">Hàng hải</a></li>
-                        <li><a href="hang-khong.html">Hàng không</a></li>
-                        <li><a href="hoa-hoc-sinh-hoc.html">Hóa học - Sinh học</a></li>
-                        <li><a href="hoach-dinh-du-an.html">Hoạch định - Dự án</a></li>
-                        <li><a href="in-an-xuat-ban.html">In ấn - Xuất bản</a></li>
-                        <li><a href="it-phan-cung-mang.html">IT phần cứng - Mạng</a></li>
-                        <li><a href="kinh-doanh-bat-dong-san.html">Kinh doanh bất động sản</a></li>
-                        <li><a href="khach-san-nha-hang.html">Khách sạn - Nhà hàng</a></li>
-                        <li><a href="kien-truc-thiet-ke-noi-that.html">Kiến trúc - TK nội thất</a></li>
-                        <li><a href="my-pham-trang-suc.html">Mỹ phẩm - Trang sức</a></li>
-                        <li><a href="ngan-hang.html">Ngân hàng</a></li>
-                        <li><a href="nganh-nghe-khac.html">Ngành nghề khác</a></li>
-                        <li><a href="nghe-thuat-dien-anh.html">Nghệ thuật điện ảnh</a></li>
-                        <li><a href="nhan-su.html">Nhân sự</a></li>
-                        <li><a href="nong-lam-ngu-nghiep.html">Nông - Lâm - Ngư nghiệp</a></li>
-                        <li><a href="o-to-xe-may.html">Ô tô - Xe máy</a></li>
-                        <li><a href="phap-ly.html">Pháp lý</a></li>
-                        <li><a href="quan-he-doi-ngoai.html">Quan hệ đối ngoại</a></li>
-                        <li><a href="quan-tri-kinh-doanh.html">Quản trị kinh doanh</a></li>
-                        <li><a href="thuc-pham-do-uong.html">Thực phẩm - Đồ uống</a></li>
-                        <li><a href="thiet-ke-do-hoa-web.html">Thiết kế đồ họa web</a></li>
-                        <li><a href="thiet-ke-my-thuat.html">Thiết kế - Mỹ thuật</a></li>
-                        <li><a href="thoi-trang.html">Thời trang</a></li>
-                        <li><a href="thu-cong-my-nghe.html">Thủ công mỹ nghệ</a></li>
-                        <li><a href="thu-ky-tro-ly.html">Thư ký - Trợ lý</a></li>
-                        <li><a href="thuong-mai-dien-tu.html">Thương mại điện tử</a></li>
-                        <li><a href="tiep-thi-quang-cao.html">Tiếp thị - Quảng cáo</a></li>
-                        <li><a href="to-chuc-su-kien-qua-tang.html">Tổ chức sự kiện - Quà tặng</a></li>
-                        <li><a href="van-tai-lai-xe.html">Vận tải - Lái xe</a></li>
-                        <li><a href="vat-tu-thiet-bi.html">Vật tư - Thiết bị</a></li>
-                        <li><a href="xuat-nhap-khau.html">Xuất - nhập khấu</a></li>
-                        <li><a href="y-te-duoc.html">Y tế - Dược</a></li>
+                        <li><a href="giao-duc-dao-tao.html">Giáo dục - Đào tạo</a></li>
+                        <li><a href="hang-gia-dung.html">Hàng gia dụng</a></li>
+                        <li><a href="hang-hai.html">Hàng hải</a></li>
+                        <li><a href="hang-khong.html">Hàng không</a></li>
+                        <li><a href="hoa-hoc-sinh-hoc.html">Hóa học - Sinh học</a></li>
+                        <li><a href="hoach-dinh-du-an.html">Hoạch định - Dự án</a></li>
+                        <li><a href="in-an-xuat-ban.html">In ấn - Xuất bản</a></li>
+                        <li><a href="it-phan-cung-mang.html">IT phần cứng - Mạng</a></li>
+                        <li><a href="kinh-doanh-bat-dong-san.html">Kinh doanh bất động sản</a></li>
+                        <li><a href="khach-san-nha-hang.html">Khách sạn - Nhà hàng</a></li>
+                        <li><a href="kien-truc-thiet-ke-noi-that.html">Kiến trúc - TK nội thất</a></li>
+                        <li><a href="my-pham-trang-suc.html">Mỹ phẩm - Trang sức</a></li>
+                        <li><a href="ngan-hang.html">Ngân hàng</a></li>
+                        <li><a href="nganh-nghe-khac.html">Ngành nghề khác</a></li>
+                        <li><a href="nghe-thuat-dien-anh.html">Nghệ thuật điện ảnh</a></li>
+                        <li><a href="nhan-su.html">Nhân sự</a></li>
+                        <li><a href="nong-lam-ngu-nghiep.html">Nông - Lâm - Ngư nghiệp</a></li>
+                        <li><a href="o-to-xe-may.html">Ô tô - Xe máy</a></li>
+                        <li><a href="phap-ly.html">Pháp lý</a></li>
+                        <li><a href="quan-he-doi-ngoai.html">Quan hệ đối ngoại</a></li>
+                        <li><a href="quan-tri-kinh-doanh.html">Quản trị kinh doanh</a></li>
+                        <li><a href="thuc-pham-do-uong.html">Thực phẩm - Đồ uống</a></li>
+                        <li><a href="thiet-ke-do-hoa-web.html">Thiết kế đồ họa web</a></li>
+                        <li><a href="thiet-ke-my-thuat.html">Thiết kế - Mỹ thuật</a></li>
+                        <li><a href="thoi-trang.html">Thời trang</a></li>
+                        <li><a href="thu-cong-my-nghe.html">Thủ công mỹ nghệ</a></li>
+                        <li><a href="thu-ky-tro-ly.html">Thư ký - Trợ lý</a></li>
+                        <li><a href="thuong-mai-dien-tu.html">Thương mại điện tử</a></li>
+                        <li><a href="tiep-thi-quang-cao.html">Tiếp thị - Quảng cáo</a></li>
+                        <li><a href="to-chuc-su-kien-qua-tang.html">Tổ chức sự kiện - Quà tặng</a></li>
+                        <li><a href="van-tai-lai-xe.html">Vận tải - Lái xe</a></li>
+                        <li><a href="vat-tu-thiet-bi.html">Vật tư - Thiết bị</a></li>
+                        <li><a href="xuat-nhap-khau.html">Xuất - nhập khấu</a></li>
+                        <li><a href="y-te-duoc.html">Y tế - Dược</a></li>
                     </ul>
                 </li>
                 <li>
                     <a>Việc làm theo địa điểm</a>
                     <ul class="sub-menu">
-                        <li><a href="quan-1.html">Quận 1</a></li>
-                        <li><a href="quan-2.html">Quận 2</a></li>
-                        <li><a href="quan-3.html">Quận 3</a></li>
-                        <li><a href="quan-4.html">Quận 4</a></li>
-                        <li><a href="quan-5.html">Quận 5</a></li>
-                        <li><a href="quan-6.html">Quận 6</a></li>
-                        <li><a href="quan-7.html">Quận 7</a></li>
-                        <li><a href="quan-8.html">Quận 8</a></li>
-                        <li><a href="quan-9.html">Quận 9</a></li>
-                        <li><a href="quan-10.html">Quận 10</a></li>
-                        <li><a href="quan-11.html">Quận 11</a></li>
-                        <li><a href="quan-12.html">Quận 12</a></li>
-                        <li><a href="quan-binh-tan.html">Quận Bình Tân</a></li>
-                        <li><a href="quan-binh-thanh.html">Quận Bình Thạnh</a></li>
-                        <li><a href="quan-go-vap.html">Quận Gò Vấp</a></li>
-                        <li><a href="quan-phu-nhuan.html">Quận Phú Nhuận</a></li>
-                        <li><a href="quan-tan-binh.html">Quận Tân Bình</a></li>
-                        <li><a href="quan-tan-phu.html">Quận Tân Phú</a></li>
-                        <li><a href="quan-thu-duc.html">Quận Thủ Đức</a></li>
-                        <li><a href="huyen-binh-chanh.html">Huyện Bình Chánh</a></li>
-                        <li><a href="huyen-cu-chi.html">Huyện Củ Chi</a></li>
-                        <li><a href="huyen-hoc-mon.html">Huyện Hóc Môn</a></li>
+                        <li><a href="quan-1.html">Quận 1</a></li>
+                        <li><a href="quan-2.html">Quận 2</a></li>
+                        <li><a href="quan-3.html">Quận 3</a></li>
+                        <li><a href="quan-4.html">Quận 4</a></li>
+                        <li><a href="quan-5.html">Quận 5</a></li>
+                        <li><a href="quan-6.html">Quận 6</a></li>
+                        <li><a href="quan-7.html">Quận 7</a></li>
+                        <li><a href="quan-8.html">Quận 8</a></li>
+                        <li><a href="quan-9.html">Quận 9</a></li>
+                        <li><a href="quan-10.html">Quận 10</a></li>
+                        <li><a href="quan-11.html">Quận 11</a></li>
+                        <li><a href="quan-12.html">Quận 12</a></li>
+                        <li><a href="quan-binh-tan.html">Quận Bình Tân</a></li>
+                        <li><a href="quan-binh-thanh.html">Quận Bình Thạnh</a></li>
+                        <li><a href="quan-go-vap.html">Quận Gò Vấp</a></li>
+                        <li><a href="quan-phu-nhuan.html">Quận Phú Nhuận</a></li>
+                        <li><a href="quan-tan-binh.html">Quận Tân Bình</a></li>
+                        <li><a href="quan-tan-phu.html">Quận Tân Phú</a></li>
+                        <li><a href="quan-thu-duc.html">Quận Thủ Đức</a></li>
+                        <li><a href="huyen-binh-chanh.html">Huyện Bình Chánh</a></li>
+                        <li><a href="huyen-cu-chi.html">Huyện Củ Chi</a></li>
+                        <li><a href="huyen-hoc-mon.html">Huyện Hóc Môn</a></li>
                     </ul>
                 </li>
                 <li>
@@ -133,6 +165,27 @@
                 <li><a href="#">Giới thiệu</a></li>
                 <li><a href="#">Liên hệ</a></li>
             </ul>
+        </div>
+
+        <!------------Login------------>
+        <div class="overlay" style="display:none;">
+            <div class="login-wrapper">
+                <div class="login-content">
+                    <a class="close">x</a>
+                    <h3>Đăng nhập</h3>
+                    <form method="post" action="index.html">
+                        <label for="username">
+                            Username:
+                            <input type="text" name="username" id="username" placeholder="Nhập Username hoặc Email" required />
+                        </label>
+                        <label for="password">
+                            Password:
+                            <input type="password" name="password" id="password" placeholder="Password" required />
+                        </label>
+                        <button type="submit">Đăng nhập</button>
+                    </form>
+                </div>
+            </div>
         </div>
 
         <div class="row" id="content">
