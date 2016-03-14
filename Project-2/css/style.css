@@ -258,3 +258,24 @@ a {
     .sub-acc a:hover {
         background-color: #454545;
     }
+/*--searchform--*/
+.searchform {
+float: left;
+margin-top: 20px;
+height:150px;
+width:350px;
+}
+.searchform input[type=submit] {
+border:black 2px solid;
+float:fixed;
+height:27px;
+background:white;
+}
+.searchform input[type=search] {
+width:250px;
+height:21px;
+border:2px solid;
+background:#ffffff;
+float:left;
+margin:0px;
+}

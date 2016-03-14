@@ -1,43 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Việc Làm Trực Tuyến</title>
+    <title>Tìm kiếm</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="device-width, initial-scale=1" />
     <link rel="stylesheet" href="css\reset.css" />
     <link rel="stylesheet" href="css\style.css" />
-    <link rel="stylesheet" href="css\form.css" />
-    	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script>
-$(document).ready(function() {
-    $("#loginLink").click(function( event ){
-        event.preventDefault();
-        $(".overlay").fadeToggle("fast");
-    });
-     
-    $(".overlayLink").click(function(event){
-        event.preventDefault();
-        var action = $(this).attr('data-action');
-         
-        $.get( "ajax/" + action, function( data ) {
-            $( ".login-content" ).html( data );
-        }); 
-         
-        $(".overlay").fadeToggle("fast");
-    });
-     
-    $(".close").click(function(){
-        $(".overlay").fadeToggle("fast");
-    });
-     
-    $(document).keyup(function(e) {
-        if(e.keyCode == 27 && $(".overlay").css("display") != "none" ) { 
-            event.preventDefault();
-            $(".overlay").fadeToggle("fast");
-        }
-    });
-});
-</script>
 </head>
 <body>
     <div id="header">
@@ -47,7 +15,7 @@ $(document).ready(function() {
         <div id="login-register">
             <div id="acc">
                 <ul>
-                    <li><a href="" class="overlayLink">Đăng Nhập</a></li>
+                    <li><a href="login.html">Đăng Nhập</a></li>
                     <li>
                         <a>Đăng Kí</a>
                         <ul class="sub-acc">
@@ -166,41 +134,21 @@ $(document).ready(function() {
                 <li><a href="#">Liên hệ</a></li>
             </ul>
         </div>
-        
-<div class="overlay" style="display:none;" >
-    <div class="login-wrapper">
-        <div class="login-content">
-            <a class="close">x</a>
-            <h3>Đăng nhập</h3>
-            <form method="post" action="index.html">
-                <label for="username">
-                    Username:
-                    <input type="text" name="username" id="username" placeholder="Nhập username hoặc email"  required />
-                </label>
-                <label for="password">
-                    Password:
-                    <input type="password" name="password" id="password" placeholder="Password"  required />
-                </label>
-                <button type="submit">Đăng nhập</button>
-            </form>
-        </div>
-    </div>
-</div>
+
         <div class="row" id="content">
-            <div id="box1" class="col">
-                <div id="head-sub-content">
-                    <a href="dang-tin-tuyen-dung.html"><h3>Tin Tuyển Dụng</h3></a>
+            <div id="sub-content">
+                <div id="name-sub-content">
+                    Tìm kiếm
+                </div>
+                <div id="search">
+               	  <form class="searchform" action="" method="get">
+						<input class="search" type="search" onfocus="if (this.value == 'Search this website …') {this.value = '';" />
+                    	<input class="searchsubmit" type="submit" value="Tìm kiếm" />
+                    </form>
                 </div>
             </div>
-
-            <div id="box2" class="col">
-                <div id="head-sub-content">
-                    <a href="tao-ho-so-ung-vien.html"><h3>Ứng Viên</h3></a>
-                </div>
-            </div>
-
         </div>
-		
+
     </div>
     <div id="footer">
         <hr />
