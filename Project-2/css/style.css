@@ -288,12 +288,16 @@ a {
     }
     #content > #popupNTD > .white_content > a > #nutX {
         float:left;
+        background-color:black;
     }
     #content > #popupNTD > .white_content > #idAcc {
         padding-left:30px;
     }
     #content > #popupNTD > .white_content > #idAcc > .dk{
-        width:140px;
+        width:200px;
+    }
+    #content > #popupNTD > .white_content > #thongTin > .dk{
+        width:200px;
     }
     #content > #popupNTD > .white_content > #thongTin {
          padding-left:30px;
@@ -322,12 +326,16 @@ a {
     }
   #content > #popupNTD > #NXV > a > #nutX2 {
         float:left;
+        background-color:black;
     }
     #content > #popupNTD > #NXV > #idAcc2 {
         padding-left:30px;
     }
     #content > #popupNTD > #NXV > #idAcc2 > .dk{
-        width:140px;
+        width:200px;
+    }
+    #content > #popupNTD > #NXV > #thongTin2 > .dk{
+        width:200px;
     }
     #content > #popupNTD > #NXV > #thongTin2 {
          padding-left:30px;
