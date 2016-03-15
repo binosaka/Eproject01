@@ -262,3 +262,33 @@ a.close-3 {
         background-color: #454545;
         cursor: pointer;
     }
+
+/*----------Search-form----------*/
+.searchform {
+    float: right;
+    height: 150px;
+    width: 170px;
+    padding: 5px;
+}
+
+    .searchform input[type=submit] {
+        border: 1px solid #454545;
+        height: 28px;
+        background-color: #191818;
+        margin-top: 5px;
+        float: right;
+        color: white;
+    }
+     .searchform input[type=submit]:hover {
+        background-color: #454545;      
+    }
+
+    .searchform input[type=search] {
+        width: 140px;
+        height: 3px;
+        border: 1px solid #454545;
+        background: #ffffff;
+        float: left;
+        margin: 0px;
+        font-size: 14px;
+    }
