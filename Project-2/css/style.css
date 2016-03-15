@@ -184,8 +184,8 @@ a {
 }
 
 
-    /*----Footer-----*/
-#footer{
+/*----Footer-----*/
+#footer {
     margin-left: 200px;
     text-align: center;
     font-size: 12px;
@@ -257,6 +257,7 @@ a {
     .sub-acc a:hover {
         background-color: #454545;
     }
+<<<<<<< HEAD
 /*Dky*/
    #content > #popupNTD {
         width:auto;
@@ -332,3 +333,5 @@ a {
     #content > #popupNTD > #NXV > #thongTin2 {
          padding-left:30px;
     }
+=======
+>>>>>>> origin/master
