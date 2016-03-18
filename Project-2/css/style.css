@@ -133,7 +133,7 @@ a {
 /*-----Content-----*/
 #content {
     margin-left: 200px;
-    width: 85%;
+    width: 72%;
     float: left;
     z-index: 1;
     max-height: 920px;
@@ -147,8 +147,8 @@ a {
 
     .row .col {
         float: left;
-        width: 40%;
-        height: 500px;
+        width: 47%;
+        min-height: 500px;
         margin-left: 2.5%;
         background-color: white;
     }
@@ -165,7 +165,7 @@ a {
 }
 
 #sub-content {
-    width: 85%;
+    width: 100%;
     min-height: 500px;
     background-color: white;
     margin-left: 2.5%;

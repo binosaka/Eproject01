@@ -11,6 +11,8 @@
     <script src="js/login-register.js"></script>
 </head>
 <body>
+
+    <!-------------Header------------->
     <div id="header">
         <div id="logo">
             <img src="img/logo.png" />
@@ -34,7 +36,11 @@
             </div>
         </div>
     </div>
+
+    <!------------Container------------>
     <div id="container">
+
+        <!------------Menu----------->
         <div id="menu">
             <ul id="sub-menu">
                 <li><a href="index.html">Trang chủ</a></li>
@@ -160,9 +166,15 @@
                         <input type="checkbox" name="checkbox" id="checkbox" /> Nhớ mật khẩu<br />
                         <button type="submit">Đăng nhập</button><hr />
                         <div id="link-form">
-                            <p>Nếu bạn chưa <strong>ĐĂNG KÍ</strong>:</p>
-                            <p><a href="#" class="overlayLink-2">Dành cho nhà tuyển dụng</a></p>
-                            <p><a href="#" class="overlayLink-3">Dành cho ứng viên</a></p>
+                            <p>
+                                Nếu bạn chưa <strong>ĐĂNG KÍ</strong>:
+                            </p>
+                            <p>
+                                <a href="#" class="overlayLink-2">Dành cho nhà tuyển dụng</a>
+                            </p>
+                            <p>
+                                <a href="#" class="overlayLink-3">Dành cho ứng viên</a>
+                            </p>
                         </div>
                     </form>
                 </div>
@@ -335,18 +347,19 @@
                         <label>
                             <input type="text" name="address" id="address" placeholder="Địa chỉ" required />
                         </label>
-
                         <button type="submit">Đăng kí</button>
                     </form>
                 </div>
             </div>
         </div>
 
-
+        <!------------Content------------->
         <div class="row" id="content">
             <div id="box1" class="col">
                 <div id="head-sub-content">
-                    <a href="tin-tyuyen-dung.html"><h3>Tin Tuyển Dụng</h3></a>
+                    <a href="tin-tyuyen-dung.html">
+                        <h3>Tin Tuyển Dụng</h3>
+                    </a>
                 </div>
             </div>
 
@@ -357,20 +370,23 @@
                     </a>
                 </div>
             </div>
+        </div>
 
-            <!------------Search-form------------>
-            <div id="search">
-                <form class="searchform" action="" method="get">
-                    <input class="search" type="search" onfocus="if (this.value == 'Search this website …') {this.value = '';" />
-                    <input class="searchsubmit" type="submit" value="Tìm kiếm" />
-                </form>
-            </div>
+        <!------------Search-form------------>
+        <div id="search">
+            <form class="searchform" action="" method="get">
+                <input class="search" type="search" onfocus="if (this.value == 'Search this website …') {this.value = '';" />
+                <input class="searchsubmit" type="submit" value="Tìm kiếm" />
+            </form>
         </div>
 
     </div>
+
+    <!------------Footer------------>
     <div id="footer">
         <hr />
         Copyright © Nhóm 1
     </div>
+
 </body>
 </html>
