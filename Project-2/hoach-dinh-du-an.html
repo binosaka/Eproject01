@@ -7,8 +7,11 @@
     <link rel="stylesheet" href="css\reset.css" />
     <link rel="stylesheet" href="css\style.css" />
     <link rel="stylesheet" href="css\form.css" />
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="js/login-register.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="js/login-register.js"></script>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.autocomplete.min.js"></script>
+    <script type="text/javascript" src="js/autocomplete.js"></script>
 </head>
 <body>
 
@@ -365,7 +368,7 @@
         <!------------Search-form------------>
         <div id="search">
             <form class="searchform" action="" method="get">
-                <input class="search" type="search" onfocus="if (this.value == 'Search this website …') {this.value = '';" />
+                <input class="search" id="autocomplete" type="search" onfocus="if (this.value == 'Search this website …') {this.value = '';" />
                 <input class="searchsubmit" type="submit" value="Tìm kiếm" />
             </form>
         </div>
