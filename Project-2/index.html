@@ -4,6 +4,7 @@
     <title>Việc Làm Trực Tuyến</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="device-width, initial-scale=1" />
+    <link rel="icon" type="image/gif" href="img/logo-2.png">
     <link rel="stylesheet" href="css\reset.css" />
     <link rel="stylesheet" href="css\style.css" />
     <link rel="stylesheet" href="css\form.css" />
@@ -27,7 +28,7 @@
                 <ul>
                     <li><a href="#" class="overlayLink">Đăng Nhập</a></li>
                     <li>
-                        <a>Đăng Kí</a>
+                        <a>Đăng Kí</a>       
                         <ul class="sub-acc">
                             <li>
                                 <a href="#" class="overlayLink-2">Dành cho nhà tuyển dụng</a>
@@ -82,12 +83,12 @@
                         <li><a href="#hang-gia-dung" class="hgd">Hàng gia dụng</a></li>
                         <li><a href="#hang-hai" class="hh">Hàng hải</a></li>
                         <li><a href="#hang-khong" class="hk">Hàng không</a></li>
-                        <li><a href="#hoa-hoc-sinh-hoc"class="hh-sh">Hóa học - Sinh học</a></li>
+                        <li><a href="#hoa-hoc-sinh-hoc" class="hh-sh">Hóa học - Sinh học</a></li>
                         <li><a href="#hoach-dinh-du-an" class="hd-da">Hoạch định - Dự án</a></li>
                         <li><a href="#in-an-xuat-ban" class="ia-xb">In ấn - Xuất bản</a></li>
                         <li><a href="#it-phan-cung-mang" class="itpc-m">IT phần cứng - Mạng</a></li>
                         <li><a href="#kinh-doanh-bat-dong-san" class="kdbds">Kinh doanh bất động sản</a></li>
-                        <li><a href="#khach-san-nha-hang" class="ks-nh">Khách sạn - Nhà hàng</a></li>                        
+                        <li><a href="#khach-san-nha-hang" class="ks-nh">Khách sạn - Nhà hàng</a></li>
                         <li><a href="#my-pham-trang-suc" class="mp-ts">Mỹ phẩm - Trang sức</a></li>
                         <li><a href="#ngan-hang" class="nh">Ngân hàng</a></li>
                         <li><a href="#nganh-nghe-khac" class="nnk">Ngành nghề khác</a></li>
@@ -158,7 +159,7 @@
                 <div class="login-content">
                     <a class="close">x</a>
                     <h3>Đăng nhập</h3>
-                    <form method="post" action="index.html">
+                    <form method="post" action="index.html" id="form-accounts">
                         <label for="username">
                             Username:
                             <input type="text" name="username" id="username" placeholder="Nhập username hoặc email" required />
@@ -169,6 +170,42 @@
                         </label>
                         <input type="checkbox" name="checkbox" id="checkbox" /> Nhớ mật khẩu<br />
                         <button type="submit">Đăng nhập</button><hr />
+                        <div id="link-form">
+                            <p>
+                                Nếu bạn chưa <strong>ĐĂNG KÍ</strong>:
+                            </p>
+                            <p>
+                                <a href="#" class="overlayLink-2">Dành cho nhà tuyển dụng</a>
+                            </p>
+                            <p>
+                                <a href="#" class="overlayLink-3">Dành cho ứng viên</a>
+                            </p>
+                            <hr />
+                            <p style="font-size: 12px;">
+                                Nếu bạn <a href="#" class="overlayLink-4" style="font-size: 16px;">Quên mật khẩu</a>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-------------Forgot Password-------------->
+        <div class="overlay-4" style="display: none;">
+            <div class="login-wrapper-4">
+                <div class="login-content-4">
+                    <a class="close-4">x</a>
+                    <h3>Lấy lại mật khẩu</h3>
+                    <form method="post" action="index.html" id="form-accounts">
+                        <label for="username">
+                            Tên tài khoản:
+                            <input type="text" name="username" id="username" placeholder="Nhập tên tài khoản" required />
+                        </label>
+                        <label for="password">
+                            Email:
+                            <input type="email" name="email" id="email" placeholder="Nhập Email" required />
+                        </label>
+                        <button type="submit">Gửi</button><hr />
                         <div id="link-form">
                             <p>
                                 Nếu bạn chưa <strong>ĐĂNG KÍ</strong>:
@@ -191,7 +228,7 @@
                 <div class="login-content-2">
                     <a class="close-2">x</a>
                     <h3>Đăng kí - Nhà tuyển dụng</h3>
-                    <form method="post" action="index.html">
+                    <form method="post" action="index.html" id="form-accounts">
                         <label for="username">
                             <input type="text" name="username" id="username" placeholder="Tên Tài Khoản" required />
                         </label>
@@ -226,7 +263,7 @@
                 <div class="login-content-3">
                     <a class="close-3">x</a>
                     <h3>Đăng kí - Ứng viên</h3>
-                    <form method="post" action="index.html">
+                    <form method="post" action="index.html" id="form-accounts">
                         <label for="username">
                             <input type="text" name="username" id="username" placeholder="Tên Tài Khoản" required />
                         </label>
@@ -364,6 +401,9 @@
                         <h3>Tin Tuyển Dụng</h3>
                     </a>
                 </div>
+                <div id="box-content">
+
+                </div>
             </div>
 
             <div id="box2" class="col">
@@ -371,6 +411,9 @@
                     <a href="#ung-vien" class="uv">
                         <h3>Ứng Viên</h3>
                     </a>
+                </div>
+                <div id="box-content">
+
                 </div>
             </div>
         </div>
