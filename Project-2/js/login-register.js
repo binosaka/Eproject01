@@ -87,3 +87,33 @@ $(document).ready(function () {
         }
     });
 });
+
+//-----------Forgot Password---------
+$(document).ready(function () {
+    $("#loginLink-4").click(function (event) {
+        event.preventDefault();
+        $(".overlay-4").fadeToggle("fast");
+    });
+
+    $(".overlayLink-4").click(function (event) {
+        event.preventDefault();
+        var action = $(this).attr('data-action');
+
+        $.get("ajax/" + action, function (data) {
+            $(".login-content-4").html(data);
+        });
+
+        $(".overlay-4").fadeToggle("fast");
+    });
+
+    $(".close-4").click(function () {
+        $(".overlay-4").fadeToggle("fast");
+    });
+
+    $(document).keyup(function (e) {
+        if (e.keyCode == 27 && $(".overlay-4").css("display") != "none") {
+            event.preventDefault();
+            $(".overlay-4").fadeToggle("fast");
+        }
+    });
+});
